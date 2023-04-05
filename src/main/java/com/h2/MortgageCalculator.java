@@ -28,8 +28,6 @@ public class MortgageCalculator {
         double M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
         this.monthlyPayment = M;
     }
-
-    }
     public static void main(String[] args) {
         long loanAmount = Long.parseLong(args[0]);
         int termInYears = Integer.parseInt(args[1]);
