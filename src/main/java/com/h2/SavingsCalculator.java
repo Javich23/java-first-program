@@ -1,5 +1,7 @@
 package com.h2;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.time.LocalDate;
 import java.time.YearMonth;
 
@@ -38,17 +40,17 @@ public class SavingsCalculator {
        return sumOfCredits() - sumOfDebits();
     }
 
-    public static void main(String[] args) {
+    public static void main(String @NotNull [] args) {
         final String[] creditsAsString = args[0].split(",");
-        final  String[] debitsAsString = args[1].split(",");
+        final String[] debitsAsString = args[1].split(",");
 
         final float[] credits = new float[creditsAsString.length];
         final float[] debits = new float[debitsAsString.length];
 
-        for(int i=0; i<creditsAsString.length; i++) {
+        for(int i = 0; i < creditsAsString.length; i++) {
             credits[i] = Float.parseFloat(creditsAsString[i]);
         }
-        for(int i=0; i<debitsAsString.length; i++) {
+        for(int i = 0; i < debitsAsString.length; i++) {
             debits[i] = Float.parseFloat(debitsAsString[i]);
         }
         final SavingsCalculator calculator = new SavingsCalculator(credits, debits);
