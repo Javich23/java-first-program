@@ -14,8 +14,8 @@ public class App {
     }
     private static int add(int[] numbers) {
         int sum = 0;
-        for (int i : numbers) {
-            sum = sum + numbers[i];
+        for (int number: numbers) {
+            sum += number;
         }
         return sum;
     }
