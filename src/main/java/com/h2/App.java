@@ -12,6 +12,13 @@ public class App
     }
 
     public static int doubleTheNumber(int number) {
-        return -1;
+        return 2 * number;
+    }
+    private static int add(int[] numbers) {sum = 0;
+        var sum = 0;
+        for(int number : numbers) {
+        sum += numbers;
+        }
+        return sum;
     }
 }
