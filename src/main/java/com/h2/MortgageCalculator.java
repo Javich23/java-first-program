@@ -1,5 +1,7 @@
 package com.h2;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.text.DecimalFormat;
 
 public class MortgageCalculator {
@@ -25,6 +27,7 @@ public class MortgageCalculator {
         long P = loanAmount;
         float r = getMonthlyInterestRate();
         int n = getNumberOfPayments();
+
         double M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
         this.monthlyPayment = M;
     }
